@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import { createServer } from 'http';
-import { parse } from 'url';
 
 const app = express();
 app.use(cors());
 
+// Define the API route
 app.get("/api/add", (req, res) => {
     const { num1, num2 } = req.query;
 
@@ -22,9 +21,5 @@ app.get("/api/add", (req, res) => {
     });
 });
 
-// Export the handler function for Vercel
-export default function handler(req, res) {
-    const server = createServer(app);
-    const parsedUrl = parse(req.url, true);
-    app(req, res, parsedUrl);
-}
+// Export the handler for Vercel
+export default app;
