@@ -1,16 +1,19 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2"
-  },
   "name": "lab8",
   "version": "1.0.0",
-  "main": "sum-api.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vercel dev",
+    "build": "vercel build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "An Express API deployed to Vercel",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
 }
+
+
